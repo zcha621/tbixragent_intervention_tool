@@ -70,29 +70,38 @@ function onClickPlayButton() {
   // add blue button
   const elementBlueButton = document.createElement('button');
   elementBlueButton.id = "blueButton";
-  elementBlueButton.innerHTML = "Light on11";
+  elementBlueButton.innerHTML = "Fan";
   playerDiv.appendChild(elementBlueButton);
   elementBlueButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 1);
   });
 
-  // add green button
-  const elementGreenButton = document.createElement('button');
-  elementGreenButton.id = "greenButton";
-  elementGreenButton.innerHTML = "Light off";
-  playerDiv.appendChild(elementGreenButton);
-  elementGreenButton.addEventListener("click", function () {
+  // add red button
+  const elementRedButton = document.createElement('button');
+  elementRedButton.id = "redButton";
+  elementRedButton.innerHTML = "Phone";
+  playerDiv.appendChild(elementRedButton);
+  elementRedButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 2);
   });
 
   // add orange button
   const elementOrangeButton = document.createElement('button');
   elementOrangeButton.id = "orangeButton";
-  elementOrangeButton.innerHTML = "Play audio";
+  elementOrangeButton.innerHTML = "Door";
   playerDiv.appendChild(elementOrangeButton);
   elementOrangeButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 3);
   });
+
+   // add green button
+   const elementGreenButton = document.createElement('button');
+   elementGreenButton.id = "greenButton";
+   elementGreenButton.innerHTML = "Resume";
+   playerDiv.appendChild(elementGreenButton);
+   elementGreenButton.addEventListener("click", function () {
+     sendClickEvent(videoPlayer, 4);
+   });
 
   // add fullscreen button
   const elementFullscreenButton = document.createElement('img');
