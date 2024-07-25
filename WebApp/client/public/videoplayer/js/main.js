@@ -70,7 +70,7 @@ function onClickPlayButton() {
   // add blue button
   const elementBlueButton = document.createElement('button');
   elementBlueButton.id = "blueButton";
-  elementBlueButton.innerHTML = "Light on11";
+  elementBlueButton.innerHTML = "Ordering";
   playerDiv.appendChild(elementBlueButton);
   elementBlueButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 1);
@@ -79,7 +79,7 @@ function onClickPlayButton() {
   // add green button
   const elementGreenButton = document.createElement('button');
   elementGreenButton.id = "greenButton";
-  elementGreenButton.innerHTML = "Light off";
+  elementGreenButton.innerHTML = "Serving";
   playerDiv.appendChild(elementGreenButton);
   elementGreenButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 2);
@@ -88,7 +88,7 @@ function onClickPlayButton() {
   // add orange button
   const elementOrangeButton = document.createElement('button');
   elementOrangeButton.id = "orangeButton";
-  elementOrangeButton.innerHTML = "Play audio";
+  elementOrangeButton.innerHTML = "Billing";
   playerDiv.appendChild(elementOrangeButton);
   elementOrangeButton.addEventListener("click", function () {
     sendClickEvent(videoPlayer, 3);
