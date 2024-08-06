@@ -69,7 +69,7 @@ function onClickPlayButton() {
 
   // add blue button
   const elementBlueButton = document.createElement('button');
-  elementBlueButton.id = "blueButton";
+  elementBlueButton.id = "greenButton";
   elementBlueButton.innerHTML = "Ordering";
   playerDiv.appendChild(elementBlueButton);
   elementBlueButton.addEventListener("click", function () {
@@ -78,7 +78,7 @@ function onClickPlayButton() {
 
   // add green button
   const elementGreenButton = document.createElement('button');
-  elementGreenButton.id = "greenButton";
+  elementGreenButton.id = "blueButton";
   elementGreenButton.innerHTML = "Serving";
   playerDiv.appendChild(elementGreenButton);
   elementGreenButton.addEventListener("click", function () {
