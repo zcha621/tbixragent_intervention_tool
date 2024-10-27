@@ -206,6 +206,33 @@ export class VideoPlayer {
     this.inputRemoting.subscribe(new Observer(this.inputSenderChannel));
   }
 
+  sendClickEvent(elementId) {
+    let data = new DataView(new ArrayBuffer(3));
+    data.setUint8(0, 4);
+    data.setInt16(1, elementId, true);
+    this.sendMsg(data.buffer);
+  }
+
+  sendMsg(msg) {
+    if (this.inputSenderChannel == null) {
+      return;
+    }
+    switch (this.inputSenderChannel.readyState) {
+      case 'connecting':
+        Logger.log('Connection not ready');
+        break;
+      case 'open':
+        this.inputSenderChannel.send(msg);
+        break;
+      case 'closing':
+        Logger.log('Attempt to sendMsg message while closing');
+        break;
+      case 'closed':
+        Logger.log('Attempt to sendMsg message while connection closed.');
+        break;
+    }
+  }
+
   async _onOpenInputSenderChannel() {
     await new Promise(resolve => setTimeout(resolve, 100));
     this.inputRemoting.startSending();

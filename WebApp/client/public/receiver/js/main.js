@@ -91,6 +91,10 @@ function onConnect() {
   const channel = renderstreaming.createDataChannel("input");
   videoPlayer.setupInput(channel);
   showStatsMessage();
+  // add a button to send a message
+  document.getElementById('sendButton').addEventListener('click', () => {
+    videoPlayer.sendClickEvent(2);
+  });
 }
 
 async function onDisconnect(connectionId) {
