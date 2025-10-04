@@ -363,3 +363,7 @@ Assets/Samples/
 WebApp/**/coverage/*
 
 .DS_Store
+
+# Exclude WebApp screenshots
+WebApp/screenshots/
+
